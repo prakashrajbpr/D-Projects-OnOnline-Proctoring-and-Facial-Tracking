@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body style="background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');background-size: cover;background-repeat: no-repeat;height: 100%;font-family: 'Numans', sans-serif;">
+	<br/>
+	<br/>
+<div class="container" style="height: 100%;align-content: center;">
+	<div class="nav bg-dark">
+	</div>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card" style="background-color: rgba(0,0,0,0.5) !important;">
+			<div class="card-header" style="color: white;">
+				<h3>User Login</h3>
+				
+			</div>
+			<div class="card-body">
+				<form action="" method="POST">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="username" name="uname">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="Id" name="id">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" placeholder="Password" name="pwd">
+					</div>
+					<div class="row align-items-center remember" style="color: white;">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn" style="color: black;background-color: #FFC312;width: 100px;">
+					</div>
+					<a href="{{url_for('reg')}}" class="btn btn-primary">Registration</a>
+
+				</form>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<span style="color: red;">{{err}}</span>
+</body>
+</html>

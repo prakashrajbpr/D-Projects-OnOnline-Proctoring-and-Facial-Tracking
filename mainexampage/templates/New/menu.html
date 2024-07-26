@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="menulogic.js"></script>
+	</head>
+	<body>
+		<h1>CSSE1001 Revision Tool</h1>
+		<p>
+			Welcome to the CSSE1001 Revision Tool.<br>
+			Please select the topics you would like to revise below, and press submit.<br>
+			The first question may take a few moments to load. Subsequent question loads should be faster.
+		</p>
+		<form action="">
+			<div id="frm">
+				<input type="checkbox" name="quest" value="exp"> Python arithmetic </br>
+				<input type="checkbox" name="quest" value="slice"> String slicing </br>
+				<input type="checkbox" name="quest" value="str"> String operations </br>
+				<input type="checkbox" name="quest" value="list"> List operations </br>
+				<input type="checkbox" name="quest" value="dict"> Dictionary operations </br>
+				<input type="checkbox" name="quest" value="class"> Classes </br>
+				<input type="checkbox" name="quest" value="io"> File I/O </br>
+			</div>
+		</form>
+		<br>
+		<button type="button" id="submit" style="width:150px" onclick="submit();">Begin</button>
+		<script>
+			function submit() {
+				var query = $('input[name="quest"]:checked');
+				var params = "?"
+				for(var i = 0; i < query.length; i++) {
+					if(params != "?") {
+						params += "&"
+					}
+					params += query[i].value
+				}
+				if(params === "?") {
+					alert("Please select at least one topic");
+				} else {
+					console.log(params);
+					if(params === '?exp'){
+						console.log('hi');
+					}
+					window.location.href='http://localhost:5000/question'+params;
+					
+
+					
+					// console.log('hi');
+					// window.open("C:/Users/RE_cs_3/Documents/Online-Proctoring-and-Facial-Tracking--master/mainexampage/templates/New/question.html"+ params);
+				}
+}
+		</script>
+	</body>
+</html>

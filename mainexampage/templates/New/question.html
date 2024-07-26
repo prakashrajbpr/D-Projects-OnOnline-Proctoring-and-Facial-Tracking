@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="{{ url_for('static', filename='js/questionlogic.js') }}"></script>
+	</head>
+	<body>
+		<center>
+		<p id="question">
+			
+		</p>
+		<form action="">
+			<div id="frm">
+
+			</div>
+		</form>
+		<br>
+		
+
+		<button type="button" id="submit" style="width:200px" onclick="pressBtn();">Submit</button><br>
+		<button type="button" id="refresh" style="width:98px" onclick="nextQuestion();">New Question</button>
+		<button type="button" id="menu" style="width:98px" >Menu</button>
+	</center>
+		<script>
+			
+				// alert("Page is loaded");
+				window.open("{{ url_for('moniter') }}");
+
+			
+
+			$('#menu').on('click',function(){
+				console.log('hi');
+				window.location.href='http://localhost:5000/question?exp';
+				
+			});
+		</script>
+	</body>
+</html>
